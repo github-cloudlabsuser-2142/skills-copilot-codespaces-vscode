@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const MarkdownEditor = () => {
-
     const data = [
-        [
-          { name: 'John', age: 25 },
-          { name: 'Jane', age: 30 }
-        ],
-        [
-          { name: 'Bob', age: 40 }
-        ]
-      ];  
-      
+        { name: 'John' },
+        { name: 'Jane' },
+        { name: 'Alice' },
+        { name: 'Bob' },
+    ];
+
+    const names = data.map(item => item.name);
+    console.log(names);
+
     const [markdown, setMarkdown] = useState('Type markdown here');
 
     const handleMarkdownChange = (event) => {
